@@ -24,27 +24,30 @@ function videoconAnimation(){
 
 }
 function loadinganimation(){
-    gsap.from("#section1 h1",{
+  var tl = gsap.timeline();
+    tl.from("#section1 h1",{
         y:100,
         delay:0.5,
         duration:0.9,
         stagger:0.3,
         opacity:0,
     });
-    gsap.from("#section1 #video-container",{
+    tl.from("#section1 #video-container",{
         y:100,
         delay:0.5,
         duration:0.9,
         stagger:0.3,
         opacity:0,
     });
-    gsap.from("#section3 #txt h1,a",{
+    tl.from("#txt h1,#txt p",{
         y:100,
-        delay:0.5,
+        delay:1,
         duration:0.9,
         stagger:0.3,
         opacity:0,
+        color:"#FFD3D3",
     });
+
 }
 videoconAnimation();
 loadinganimation()
