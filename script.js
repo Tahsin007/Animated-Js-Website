@@ -25,7 +25,7 @@ function videoconAnimation(){
 }
 function loadinganimation(){
   var tl = gsap.timeline();
-    tl.from("#section1 h1",{
+    gsap.from("#section1 h1",{
         y:100,
         delay:0.5,
         duration:0.9,
@@ -46,6 +46,18 @@ function loadinganimation(){
         stagger:0.3,
         opacity:0,
         color:"#FFD3D3",
+    });
+    tl.from("#section4 #child1 img,#section4 #child2 img,#section4 #child3 img,#section4 #child4 img",{
+        scale:0,
+        delay:0.4,
+        stagger:0.4,
+        duration:1,
+    });
+    tl.from("#section5 h1,#section5 p",{
+        scale:0,
+        delay:0.2,
+        stagger:0.4,
+        duration:1,
     });
 
 }
